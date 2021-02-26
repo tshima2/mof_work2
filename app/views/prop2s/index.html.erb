@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prop2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prop2s.each do |prop2| %>
+      <tr>
+        <td><%= prop2.name %></td>
+        <td><%= link_to 'Show', prop2 %></td>
+        <td><%= link_to 'Edit', edit_prop2_path(prop2) %></td>
+        <td><%= link_to 'Destroy', prop2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prop2', new_prop2_path %>
